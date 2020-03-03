@@ -1,4 +1,5 @@
 #!/usr/bin/env tclsh
+
 proc speak {msg} { exec espeak -s 140 $msg }
 proc chime1 {} { exec play -q -V1 -v 0.2 chime1.ogg }
 proc chime2 {} { exec play -q -V1 -v 0.2 chime2.ogg }
