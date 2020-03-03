@@ -1,0 +1,5 @@
+# timetable
+
+## Usage
+    $ ./timetable.tcl
+
