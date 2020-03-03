@@ -1,10 +1,8 @@
 #!/usr/bin/env tclsh
-
+proc speak {msg} { exec espeak -s 140 $msg }
 proc chime1 {} { exec play -q -V1 -v 0.2 chime1.ogg }
 proc chime2 {} { exec play -q -V1 -v 0.2 chime2.ogg }
 proc chime3 {} { exec play -q -V1 -v 0.5 chime3.wav }
-proc speak {msg} { exec espeak -s 140 $msg }
-
 proc cond {at} {
   set now [clock seconds]
   set t1 [clock format $now -format "%H:%M"]
