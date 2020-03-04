@@ -14,7 +14,6 @@ proc s {at1 at2 msg} {
   if {[cond $at1]} { chime2; speak $msg }
   if {[cond $at2]} { chime3 }
 }
-set min1 [clock format [clock seconds] -format "%M"]
 while {1} {
   global now; set now [clock seconds]
   c "09:00"; c "12:00"; c "15:00"; c "18:00"; c "21:00"; c "00:00"
@@ -25,7 +24,8 @@ while {1} {
 
   s "Wed 20:00" "Wed 21:30" "Money management"
   while {1} {
+    set min1 [clock format $now -format "%M"]
     set min2 [clock format [clock seconds] -format "%M"]
-    if {$min1 != $min2} { set min1 $min2; break } else { after 1000 }
+    if {$min1 != $min2} { break } else { after 60000 }
   }
 }
