@@ -24,7 +24,7 @@ proc cond {at} {
 }
 proc c {at} { if {[cond $at]} { chime1 }}
 proc s {at1 at2 msg} {
-  set msg2 [concat $msg "," [dmsg $at1 $at2]]
+  set msg2 [concat $msg "." [dmsg $at1 $at2]]
   if {[cond $at1]} { chime2; speak $msg2 }
   if {[cond $at2]} { chime3 }
 }
