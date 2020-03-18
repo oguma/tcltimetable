@@ -5,5 +5,5 @@
     $ sudo apt install sox
 
 ## Usage
-    $ ./timetable.tcl
+    $ ./start.tcl
 
